@@ -121,9 +121,6 @@
         <NamedIndividual IRI="#LibroFantasía"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LibroFicciónNoFicción"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#LibroSinAutor"/>
     </Declaration>
     <Declaration>
@@ -149,6 +146,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#géneroFicción"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#géneroFicciónNoFicción"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#géneroNoFicción"/>
@@ -418,16 +418,6 @@
         <ObjectProperty IRI="#tieneGénero"/>
         <NamedIndividual IRI="#LibroFantasía"/>
         <NamedIndividual IRI="#géneroFantasía"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#tieneGénero"/>
-        <NamedIndividual IRI="#LibroFicciónNoFicción"/>
-        <NamedIndividual IRI="#géneroFicción"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#tieneGénero"/>
-        <NamedIndividual IRI="#LibroFicciónNoFicción"/>
-        <NamedIndividual IRI="#géneroNoFicción"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#publicadoPor"/>

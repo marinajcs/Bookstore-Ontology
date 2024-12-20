@@ -109,6 +109,15 @@
         <NamedIndividual IRI="#Gabriel_García_Márquez"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Libro1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Libro2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Libro3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#LibroBarato"/>
     </Declaration>
     <Declaration>
@@ -329,6 +338,18 @@
         <NamedIndividual IRI="#Gabriel_García_Márquez"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Libro"/>
+        <NamedIndividual IRI="#Libro1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Libro"/>
+        <NamedIndividual IRI="#Libro2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Libro"/>
+        <NamedIndividual IRI="#Libro3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <ObjectExactCardinality cardinality="2">
             <ObjectProperty IRI="#escritoPor"/>
             <Class IRI="#Autor"/>
@@ -391,6 +412,21 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#escritoPor"/>
+        <NamedIndividual IRI="#Libro1"/>
+        <NamedIndividual IRI="#Gabriel_García_Márquez"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#escritoPor"/>
+        <NamedIndividual IRI="#Libro2"/>
+        <NamedIndividual IRI="#Rosa_Montero"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#escritoPor"/>
+        <NamedIndividual IRI="#Libro3"/>
+        <NamedIndividual IRI="#Gabriel_García_Márquez"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#escritoPor"/>
         <NamedIndividual IRI="#LibroBarato"/>
         <NamedIndividual IRI="#Rosa_Montero"/>
     </ObjectPropertyAssertion>
@@ -443,6 +479,31 @@
         <DataProperty IRI="#tienePrecio"/>
         <NamedIndividual IRI="#EjemploLibro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">29.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneAñoPublicación"/>
+        <NamedIndividual IRI="#Libro1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Libro1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneAñoPublicación"/>
+        <NamedIndividual IRI="#Libro2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Libro2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Libro3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tieneAñoPublicación"/>

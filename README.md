@@ -1,11 +1,11 @@
-# Práctica 4: Creación de una ontología de libros con Protégé
+# Práctica 4-5: Creación de una ontología de libros con Protégé y consultas en SPARQL
 
 ## Entregables
 
-* Archivo OWL: ontología de libros en el fichero `bookstore.owl`.
+* Archivos OWL: ontología de libros en el fichero `bookstore.owl` y versión ampliada en `bookstore-v2.owl`.
 * Imágenes: representaciones gráficas realziadas con OntoGraf y OWLViz, en la carpeta `/grafos`.
-* Documentación: explicación de la estructura, restricciones y pruebas de razonamiento realizadas,
-en el fichero `P4-Documentación`.
+* Documentación: explicación de la estructura, restricciones y pruebas de razonamiento realizadas para
+cada ontología en los ficheros `P4-Doc` y `P5-Doc`.
 
 ## Trabajo de ampliación realizado
 

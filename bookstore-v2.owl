@@ -106,6 +106,9 @@
         <DataProperty IRI="#tieneAñoPublicación"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#tieneDescuento"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#tienePrecio"/>
     </Declaration>
     <Declaration>
@@ -194,6 +197,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#géneroTerror"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Edición"/>
@@ -325,6 +331,13 @@
     <SubClassOf>
         <Class IRI="#Ficción"/>
         <Class IRI="#Género"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lector"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#tieneDescuento"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Libro"/>
@@ -744,6 +757,10 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#tieneDescuento"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#tienePrecio"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -760,6 +777,10 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#tieneDescuento"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#tienePrecio"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
     </DataPropertyRange>
@@ -771,6 +792,43 @@
         <DataProperty IRI="#tieneValoración"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>rule</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Lector"/>
+                <Variable abbreviatedIRI=":l"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#compradoPor"/>
+                <Variable abbreviatedIRI=":libro"/>
+                <Variable abbreviatedIRI=":l"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#tieneGénero"/>
+                <Variable abbreviatedIRI=":libro"/>
+                <NamedIndividual IRI="#géneroNoFicción"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tieneDescuento"/>
+                <Variable abbreviatedIRI=":l"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.10</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
 </Ontology>
 
 
